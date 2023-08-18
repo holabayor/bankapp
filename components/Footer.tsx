@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export default function Footer() {
-    return (
-        <footer>
-            &copy;&nbsp;{new Date().getFullYear()} Name MFB
-        </footer>
-    )
+  return (
+    <footer className="bottom-0">
+      &copy;&nbsp;{new Date().getFullYear()} Name MFB
+    </footer>
+  );
 }
