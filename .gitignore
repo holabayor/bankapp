@@ -38,3 +38,5 @@ next-env.d.ts
 input.csv
 output.csv
 *.csv
+newscript.js
+output.json

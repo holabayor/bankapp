@@ -21,7 +21,7 @@
       "Txn Ref": "TT2318422VZT",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-02T23:00:00.000Z",
-      "Debit": 10,
+      "Debit": "10,000.00",
       "Closing Balance": "5,029.09"
     },
     {
@@ -30,7 +30,7 @@
       "Txn Ref": "TT23184120M9",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-02T23:00:00.000Z",
-      "Debit": 114,
+      "Debit": "114,020.00",
       "Closing Balance": "'-108,990.91'"
     },
     {
@@ -57,7 +57,7 @@
       "Txn Ref": "FT23185009743678",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-03T23:00:00.000Z",
-      "Debit": 47,
+      "Debit": "47,150.00",
       "Closing Balance": "'-15,350.91'"
     },
     {
@@ -84,7 +84,7 @@
       "Txn Ref": "FT23187640658464",
       "Narration": "AMOUNTCOLLECTEDFROM CUSTO OMERS 202",
       "Booking Date": "2023-07-05T23:00:00.000Z",
-      "Debit": 187,
+      "Debit": "187,460.00",
       "Closing Balance": "'-175,590.91'"
     },
     {
@@ -93,7 +93,7 @@
       "Txn Ref": "FT23187080023668",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-05T23:00:00.000Z",
-      "Debit": 6,
+      "Debit": "6,720.00",
       "Closing Balance": "'-182,310.91'"
     },
     {
@@ -120,7 +120,7 @@
       "Txn Ref": "FT23188336791317",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-06T23:00:00.000Z",
-      "Debit": 7,
+      "Debit": "7,950.00",
       "Closing Balance": "'-160,110.91'"
     },
     {
@@ -138,7 +138,7 @@
       "Txn Ref": "FT23188337486882",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-06T23:00:00.000Z",
-      "Debit": 22,
+      "Debit": "22,200.00",
       "Closing Balance": "'-164,960.91'"
     },
     {
@@ -147,7 +147,7 @@
       "Txn Ref": "FT23188337486884",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-06T23:00:00.000Z",
-      "Debit": 17,
+      "Debit": "17,350.00",
       "Closing Balance": "'-182,310.91'"
     },
     {
@@ -174,7 +174,7 @@
       "Txn Ref": "TT23192NRYD9",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-10T23:00:00.000Z",
-      "Debit": 6,
+      "Debit": "6,000.00",
       "Closing Balance": "'-104,070.91'"
     },
     {
@@ -192,7 +192,7 @@
       "Txn Ref": "FT23192869636886",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-10T23:00:00.000Z",
-      "Debit": 56,
+      "Debit": "56,300.00",
       "Closing Balance": "'-154,370.91'"
     },
     {
@@ -201,7 +201,7 @@
       "Txn Ref": "FT23192869636888",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-10T23:00:00.000Z",
-      "Debit": 27,
+      "Debit": "27,940.00",
       "Closing Balance": "'-182,310.91'"
     },
     {
@@ -219,7 +219,7 @@
       "Txn Ref": "TT231937D237",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-11T23:00:00.000Z",
-      "Debit": 18,
+      "Debit": "18,000.00",
       "Closing Balance": "'-151,860.91'"
     },
     {
@@ -246,7 +246,7 @@
       "Txn Ref": "FT23195880400211",
       "Narration": "AMOUNT COLLECTED FROM SUN NDRY C 20",
       "Booking Date": "2023-07-13T23:00:00.000Z",
-      "Debit": 31,
+      "Debit": "31,050.00",
       "Closing Balance": "'-133,860.91'"
     },
     {
@@ -255,7 +255,7 @@
       "Txn Ref": "FT23195880501333",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-13T23:00:00.000Z",
-      "Debit": 48,
+      "Debit": "48,450.00",
       "Closing Balance": "'-182,310.91'"
     },
     {
@@ -273,7 +273,7 @@
       "Txn Ref": "TT23195KS1PT",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-13T23:00:00.000Z",
-      "Debit": 11,
+      "Debit": "11,000.00",
       "Closing Balance": "'-164,510.91'"
     },
     {
@@ -291,7 +291,7 @@
       "Txn Ref": "FT23195880903434",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-13T23:00:00.000Z",
-      "Debit": 28,
+      "Debit": "28,800.00",
       "Closing Balance": "'-182,310.91'"
     },
     {
@@ -300,7 +300,7 @@
       "Txn Ref": "FT23199750037054",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-17T23:00:00.000Z",
-      "Debit": 64,
+      "Debit": "64,200.00",
       "Closing Balance": "'-246,510.91'"
     },
     {
@@ -327,7 +327,7 @@
       "Txn Ref": "TT23199YMCZB",
       "Narration": "PAYMENT TO SUNDRY CUSTOMERS",
       "Booking Date": "2023-07-17T23:00:00.000Z",
-      "Debit": 16,
+      "Debit": "16,500.00",
       "Closing Balance": "'-182,310.91'"
     },
     {
@@ -349,7 +349,7 @@
       "Txn Ref": "FT23200507079001",
       "Narration": "AMOUNT COLLECTED FROM SUN NDRY C 20",
       "Booking Date": "2023-07-18T23:00:00.000Z",
-      "Debit": 34,
+      "Debit": "34,000.00",
       "Closing Balance": "'-182,310.91'"
     },
     {
@@ -367,7 +367,7 @@
       "Txn Ref": "TT232012P9DV",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-19T23:00:00.000Z",
-      "Debit": 20,
+      "Debit": "20,500.00",
       "Closing Balance": "'-149,810.91'"
     },
     {
@@ -376,7 +376,7 @@
       "Txn Ref": "FT23201930034282",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-19T23:00:00.000Z",
-      "Debit": 53,
+      "Debit": "53,000.00",
       "Closing Balance": "'-202,810.91'"
     },
     {
@@ -403,7 +403,7 @@
       "Txn Ref": "TT23202MB0N0",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-20T23:00:00.000Z",
-      "Debit": 10,
+      "Debit": "10,650.00",
       "Closing Balance": "'-167,910.91'"
     },
     {
@@ -421,7 +421,7 @@
       "Txn Ref": "FT23202572277770",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-20T23:00:00.000Z",
-      "Debit": 25,
+      "Debit": "25,050.00",
       "Closing Balance": "'-182,310.91'"
     },
     {
@@ -439,7 +439,7 @@
       "Txn Ref": "FT23205403588977",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-23T23:00:00.000Z",
-      "Debit": 71,
+      "Debit": "71,300.00",
       "Closing Balance": "'-215,610.91'"
     },
     {
@@ -457,7 +457,7 @@
       "Txn Ref": "TT232062H44K",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-24T23:00:00.000Z",
-      "Debit": 38,
+      "Debit": "38,000.00",
       "Closing Balance": "'-182,310.91'"
     },
     {
@@ -466,7 +466,7 @@
       "Txn Ref": "TT232062B027",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-24T23:00:00.000Z",
-      "Debit": 25,
+      "Debit": "25,000.00",
       "Closing Balance": "'-207,310.91'"
     },
     {
@@ -484,7 +484,7 @@
       "Txn Ref": "FT23206413219617",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-24T23:00:00.000Z",
-      "Debit": 31,
+      "Debit": "31,200.00",
       "Closing Balance": "'-207,310.91'"
     },
     {
@@ -511,7 +511,7 @@
       "Txn Ref": "FT23207365716530",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-25T23:00:00.000Z",
-      "Debit": 36,
+      "Debit": "36,800.00",
       "Closing Balance": "'-190,110.91'"
     },
     {
@@ -538,7 +538,7 @@
       "Txn Ref": "TT23208ZHHVP",
       "Narration": "PAYMENT TO CUSTOMERS",
       "Booking Date": "2023-07-26T23:00:00.000Z",
-      "Debit": 29,
+      "Debit": "29,000.00",
       "Closing Balance": "'-159,910.91'"
     },
     {
@@ -547,7 +547,7 @@
       "Txn Ref": "TT232087H97Q",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-26T23:00:00.000Z",
-      "Debit": 16,
+      "Debit": "16,200.00",
       "Closing Balance": "'-176,110.91'"
     },
     {
@@ -556,7 +556,7 @@
       "Txn Ref": "FT23209820430916",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-27T23:00:00.000Z",
-      "Debit": 22,
+      "Debit": "22,400.00",
       "Closing Balance": "'-198,510.91'"
     },
     {
@@ -583,7 +583,7 @@
       "Txn Ref": "TT23209HB7JX",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-27T23:00:00.000Z",
-      "Debit": 14,
+      "Debit": "14,000.00",
       "Closing Balance": "'-174,610.91'"
     },
     {
@@ -601,7 +601,7 @@
       "Txn Ref": "FT23212720202563",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-30T23:00:00.000Z",
-      "Debit": 21,
+      "Debit": "21,700.00",
       "Closing Balance": "'-182,310.91'"
     },
     {
@@ -610,7 +610,7 @@
       "Txn Ref": "TT23212KJFZJ",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-30T23:00:00.000Z",
-      "Debit": 60,
+      "Debit": "60,000.00",
       "Closing Balance": "'-242,310.91'"
     },
     {
@@ -628,7 +628,7 @@
       "Txn Ref": "FT23212716181525",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-07-30T23:00:00.000Z",
-      "Debit": 195,
+      "Debit": "195,160.00",
       "Closing Balance": "'-401,320.91'"
     },
     {
@@ -646,7 +646,7 @@
       "Txn Ref": "TT2321319RKG",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-31T23:00:00.000Z",
-      "Debit": 9,
+      "Debit": "9,400.00",
       "Closing Balance": "'-364,470.91'"
     },
     {
@@ -655,7 +655,7 @@
       "Txn Ref": "TT23213L4VCD",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-31T23:00:00.000Z",
-      "Debit": 214,
+      "Debit": "214,827.00",
       "Closing Balance": "'-579,297.91'"
     },
     {
@@ -682,7 +682,7 @@
       "Txn Ref": "TT23213YL31L",
       "Narration": "PAYMENT",
       "Booking Date": "2023-07-31T23:00:00.000Z",
-      "Debit": 214,
+      "Debit": "214,820.00",
       "Closing Balance": "'-74,160.91'"
     },
     {
@@ -700,7 +700,7 @@
       "Txn Ref": "FT23215742817218",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-02T23:00:00.000Z",
-      "Debit": 115,
+      "Debit": "115,150.00",
       "Closing Balance": "'-172,760.91'"
     },
     {
@@ -727,7 +727,7 @@
       "Txn Ref": "TT23216NML4Q",
       "Narration": "FUNMI",
       "Booking Date": "2023-08-03T23:00:00.000Z",
-      "Debit": 9,
+      "Debit": "9,450.00",
       "Closing Balance": "'-163,310.91'"
     },
     {
@@ -736,7 +736,7 @@
       "Txn Ref": "FT23219338000069",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-06T23:00:00.000Z",
-      "Debit": 9,
+      "Debit": "9,450.00",
       "Closing Balance": "'-172,760.91'"
     },
     {
@@ -754,7 +754,7 @@
       "Txn Ref": "FT23219461021909",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-06T23:00:00.000Z",
-      "Debit": 42,
+      "Debit": "42,400.00",
       "Closing Balance": "'-172,760.91'"
     },
     {
@@ -772,7 +772,7 @@
       "Txn Ref": "FT23221530930012",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-08T23:00:00.000Z",
-      "Debit": 25,
+      "Debit": "25,950.00",
       "Closing Balance": "'-172,760.91'"
     },
     {
@@ -799,7 +799,7 @@
       "Txn Ref": "FT23222286930099",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-09T23:00:00.000Z",
-      "Debit": 45,
+      "Debit": "45,300.00",
       "Closing Balance": "'-142,220.91'"
     },
     {
@@ -808,7 +808,7 @@
       "Txn Ref": "FT23222286930335",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-09T23:00:00.000Z",
-      "Debit": 30,
+      "Debit": "30,540.00",
       "Closing Balance": "'-172,760.91'"
     },
     {
@@ -835,7 +835,7 @@
       "Txn Ref": "FT23226106080093",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-13T23:00:00.000Z",
-      "Debit": 41,
+      "Debit": "41,400.00",
       "Closing Balance": "'-167,630.91'"
     },
     {
@@ -844,7 +844,7 @@
       "Txn Ref": "FT23226106090161",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-13T23:00:00.000Z",
-      "Debit": 34,
+      "Debit": "34,130.00",
       "Closing Balance": "'-201,760.91'"
     },
     {
@@ -853,7 +853,7 @@
       "Txn Ref": "FT23227043972586",
       "Narration": "REV:PAYMENT TO CUSTOMERS 20230815",
       "Booking Date": "2023-08-14T23:00:00.000Z",
-      "Debit": 12,
+      "Debit": "12,400.00",
       "Closing Balance": "'-214,160.91'"
     },
     {
@@ -889,7 +889,7 @@
       "Txn Ref": "TT23227GGVJL",
       "Narration": "PAYMENT",
       "Booking Date": "2023-08-14T23:00:00.000Z",
-      "Debit": 20,
+      "Debit": "20,000.00",
       "Closing Balance": "'-131,160.91'"
     },
     {
@@ -898,7 +898,7 @@
       "Txn Ref": "TT23227G4TG0",
       "Narration": "PAYMENT",
       "Booking Date": "2023-08-14T23:00:00.000Z",
-      "Debit": 6,
+      "Debit": "6,000.00",
       "Closing Balance": "'-137,160.91'"
     },
     {
@@ -916,7 +916,7 @@
       "Txn Ref": "FT23227000076540",
       "Narration": "AMOUNT COLLECTED FROM SUN NDRY C 20",
       "Booking Date": "2023-08-14T23:00:00.000Z",
-      "Debit": 55,
+      "Debit": "55,600.00",
       "Closing Balance": "'-172,760.91'"
     },
     {
@@ -934,7 +934,7 @@
       "Txn Ref": "TT23229JZ2WP",
       "Narration": "GBADAMOSI FUNMILAYO",
       "Booking Date": "2023-08-16T23:00:00.000Z",
-      "Debit": 5,
+      "Debit": "5,000.00",
       "Closing Balance": "'-154,560.91'"
     },
     {
@@ -943,7 +943,7 @@
       "Txn Ref": "FT23229486068107",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-16T23:00:00.000Z",
-      "Debit": 23,
+      "Debit": "23,200.00",
       "Closing Balance": "'-177,760.91'"
     },
     {
@@ -952,7 +952,7 @@
       "Txn Ref": "FT23229486068109",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-16T23:00:00.000Z",
-      "Debit": 43,
+      "Debit": "43,700.00",
       "Closing Balance": "'-221,460.91'"
     },
     {
@@ -979,7 +979,7 @@
       "Txn Ref": "TT232309TRC4",
       "Narration": "PAYMENT TO SUNDRY CUSTOMER",
       "Booking Date": "2023-08-17T23:00:00.000Z",
-      "Debit": 12,
+      "Debit": "12,000.00",
       "Closing Balance": "'-177,760.91'"
     },
     {
@@ -988,7 +988,7 @@
       "Txn Ref": "TT23230NHB3D",
       "Narration": "PAYMENT TO SUNDRY CUSTOMERS",
       "Booking Date": "2023-08-17T23:00:00.000Z",
-      "Debit": 16,
+      "Debit": "16,600.00",
       "Closing Balance": "'-194,360.91'"
     },
     {
@@ -1015,7 +1015,7 @@
       "Txn Ref": "FT23230009568807",
       "Narration": "AMOUNT COLLECTED FROM CUS STOMER 20",
       "Booking Date": "2023-08-17T23:00:00.000Z",
-      "Debit": 23,
+      "Debit": "23,950.00",
       "Closing Balance": "'-172,760.91'"
     },
     {
