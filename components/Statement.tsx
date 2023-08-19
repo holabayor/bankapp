@@ -31,9 +31,9 @@ export default function BankStatementTable({ accountData }: Props) {
     <table className="w-full border-collapse border">
       <thead>
         <tr>
-          <th className="p-2 border">Date</th>
+          <th className="p-2 border">Booking Date</th>
           <th className="p-2 border">Value Date</th>
-          <th className="p-2 border">Reference</th>
+          <th className="p-2 border">Txn Ref</th>
           <th className="p-2 border">Description</th>
           <th className="p-2 border">Debit</th>
           <th className="p-2 border">Credit</th>
@@ -42,9 +42,10 @@ export default function BankStatementTable({ accountData }: Props) {
       </thead>
       <tbody>
         {transactions.map((transaction, index) => {
-          const debit = transaction.type === 'debit' ? transaction.amount : 0;
-          const credit = transaction.type === 'credit' ? transaction.amount : 0;
-          currentBalance = currentBalance + credit - debit;
+          const debit = transaction.type === 'debit' ? transaction.amount : ' ';
+          const credit =
+            transaction.type === 'credit' ? transaction.amount : ' ';
+          currentBalance = currentBalance + Number(credit) - Number(debit);
           return (
             <tr key={index} className="text-center">
               <td className="p-2 border">

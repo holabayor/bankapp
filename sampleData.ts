@@ -17,7 +17,7 @@ export const sampleData = {
       valueDate: '2023-08-05',
       reference: 'TT123491',
       description: 'Online Shopping',
-      amount: -150,
+      amount: 150,
       type: 'debit',
     },
     {
@@ -25,7 +25,7 @@ export const sampleData = {
       valueDate: '2023-08-10',
       reference: 'TT123492',
       description: 'ATM Withdrawal',
-      amount: -200,
+      amount: 200,
       type: 'debit',
     },
     {
@@ -33,7 +33,7 @@ export const sampleData = {
       valueDate: '2023-08-15',
       reference: 'TT123493',
       description: 'Utility Bill Payment',
-      amount: -80,
+      amount: 80,
       type: 'debit',
     },
     {
