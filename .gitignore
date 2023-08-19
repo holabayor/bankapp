@@ -37,3 +37,4 @@ next-env.d.ts
 # project test files
 input.csv
 output.csv
+*.csv
