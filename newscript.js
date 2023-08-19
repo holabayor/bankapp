@@ -24,15 +24,33 @@ fs.createReadStream(inputFile)
     const inputLines = fs.readFileSync(inputFile, 'utf-8').split('\n');
 
     // Extract specific values from skipped lines
-    const accountNumber = inputLines[0].split(',')[2].replace(/"/g, ''); // Remove double quotes from account number
-    const accountType = inputLines[0].split(',')[4].replace(/"/g, ''); // Remove double quotes from account type
-    const customerNumber = inputLines[1].split(',')[1].replace(/"/g, ''); // Remove double quotes from customer number
-    const accountName = inputLines[1].split(',')[2].replace(/"/g, ''); // Remove double quotes from account name
-    const currency = inputLines[1].split(',')[4].replace(/"/g, ''); // Remove double quotes from currency
+    const extractValue = (line, index) =>
+      line.split(',')[index].replace(/"/g, '').replace(/\r/g, '');
+
+    const accountNumber = extractValue(inputLines[0], 2); // Remove double quotes and \r from account number
+    const accountType = extractValue(inputLines[0], 4); // Remove double quotes and \r from account type
+    const customerNumber = extractValue(inputLines[1], 1); // Remove double quotes from customer number
+    const accountName = extractValue(inputLines[1], 2); // Remove double quotes from account name
+    const currency = extractValue(inputLines[1], 4); // Remove double quotes and \r from currency
+
     let openingBalance = inputLines[3].replace(/[^0-9.-]/g, ''); // Extract value after comma and remove unwanted characters
     openingBalance = openingBalance.endsWith('-')
       ? parseFloat(openingBalance) * -1
       : parseFloat(openingBalance);
+
+    jsonData.forEach((transaction) => {
+      transaction['Value Date'] = new Date(transaction['Value Date']);
+      transaction['Booking Date'] = new Date(transaction['Booking Date']);
+      if (transaction['Debit']) {
+        transaction['Debit'] = parseFloat(transaction['Debit']);
+      }
+      //   if (transaction['Credit']) {
+      //     transaction['Credit'] = parseFloat(transaction['Credit']);
+      //   }
+      //   transaction['Closing Balance'] = parseFloat(
+      //     transaction['Closing Balance']
+      //   );
+    });
 
     // Create an object with the extracted values
     const finalData = {

@@ -1,20 +1,25 @@
+import { log } from 'console';
 import format from 'date-fns/format';
 import React from 'react';
 
 interface Transaction {
-  date: string;
-  valueDate: string;
-  reference: string;
-  description: string;
-  amount: number;
-  type: 'credit' | 'debit';
+  'Value Date': string;
+  'Booking Date': string;
+  'Txn Ref': string;
+  Description: string;
+  Narration: string;
+  Debit?: any;
+  Credit?: any;
+  'Closing Balance': string;
 }
 
 interface AccountData {
   accountNumber: string;
-  accountHolder: string;
+  accountType: string;
+  customerNumber: string;
+  accountName: string;
   currency: string;
-  balance: number;
+  openingBalance: number;
   transactions: Transaction[];
 }
 
@@ -23,9 +28,9 @@ interface Props {
 }
 
 export default function BankStatementTable({ accountData }: Props) {
-  const { transactions, balance } = accountData;
+  const { transactions, openingBalance } = accountData;
 
-  let currentBalance = balance;
+  let currentBalance = openingBalance;
 
   return (
     <table className="w-full border-collapse border">
@@ -42,22 +47,24 @@ export default function BankStatementTable({ accountData }: Props) {
       </thead>
       <tbody>
         {transactions.map((transaction, index) => {
-          const debit = transaction.type === 'debit' ? transaction.amount : ' ';
+          const debit =
+            parseFloat(transaction['Debit']?.replace(/,/g, '')) || 0;
+          console.log(debit);
           const credit =
-            transaction.type === 'credit' ? transaction.amount : ' ';
-          currentBalance = currentBalance + Number(credit) - Number(debit);
+            parseFloat(transaction['Credit']?.replace(/,/g, '')) || 0;
+          currentBalance = currentBalance + credit - debit;
           return (
             <tr key={index} className="text-center">
               <td className="p-2 border">
-                {format(new Date(transaction.date), 'P')}
+                {format(new Date(transaction['Booking Date']), 'P')}
               </td>
               <td className="p-2 border">
-                {format(new Date(transaction.valueDate), 'P')}
+                {format(new Date(transaction['Value Date']), 'P')}
               </td>
-              <td className="p-2 border">{transaction.reference}</td>
-              <td className="p-2 border">{transaction.description}</td>
-              <td className="p-2 border">{debit}</td>
-              <td className="p-2 border">{credit}</td>
+              <td className="p-2 border">{transaction['Txn Ref']}</td>
+              <td className="p-2 border">{transaction['Description']}</td>
+              <td className="p-2 border">{debit || ''}</td>
+              <td className="p-2 border">{credit || ''}</td>
               <td className="p-2 border">{currentBalance}</td>
             </tr>
           );
