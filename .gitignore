@@ -40,3 +40,6 @@ output.csv
 *.csv
 newscript.js
 output.json
+pdf.js
+output.json
+table.pdf

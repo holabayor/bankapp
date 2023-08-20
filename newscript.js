@@ -9,7 +9,6 @@ const jsonData = [];
 fs.createReadStream(inputFile)
   .pipe(csv({ skipLines: 4 })) // Skip first 4 lines (starting from the 5th row)
   .on('data', (row) => {
-    console.log(row);
     // Filter out columns with null values in the 5th row
     const filteredRow = {};
     Object.keys(row).forEach((key) => {
@@ -38,19 +37,19 @@ fs.createReadStream(inputFile)
       ? parseFloat(openingBalance) * -1
       : parseFloat(openingBalance);
 
-    jsonData.forEach((transaction) => {
-      transaction['Value Date'] = new Date(transaction['Value Date']);
-      transaction['Booking Date'] = new Date(transaction['Booking Date']);
-      //   if (transaction['Debit']) {
-      //     transaction['Debit'] = parseFloat(transaction['Debit']);
-      //   }
-      //   if (transaction['Credit']) {
-      //     transaction['Credit'] = parseFloat(transaction['Credit']);
-      //   }
-      //   transaction['Closing Balance'] = parseFloat(
-      //     transaction['Closing Balance']
-      //   );
-    });
+    // jsonData.forEach((transaction) => {
+    //   transaction['Value Date'] = new Date(transaction['Value Date']);
+    //   transaction['Booking Date'] = new Date(transaction['Booking Date']);
+    //     if (transaction['Debit']) {
+    //       transaction['Debit'] = parseFloat(transaction['Debit']);
+    //     }
+    //     if (transaction['Credit']) {
+    //       transaction['Credit'] = parseFloat(transaction['Credit']);
+    //     }
+    //     transaction['Closing Balance'] = parseFloat(
+    //       transaction['Closing Balance']
+    //     );
+    // });
 
     // Create an object with the extracted values
     const finalData = {

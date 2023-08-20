@@ -26,6 +26,15 @@ export default function Dashboard() {
         <Button size={'lg'} className="w-1/4 font-semibold">
           Search
         </Button>
+        <Button
+          size={'lg'}
+          onClick={() => {
+            console.log('download');
+          }}
+          className="w-1/4 font-semibold"
+        >
+          Download
+        </Button>
       </div>
     </main>
   );

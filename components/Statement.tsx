@@ -49,7 +49,6 @@ export default function BankStatementTable({ accountData }: Props) {
         {transactions.map((transaction, index) => {
           const debit =
             parseFloat(transaction['Debit']?.replace(/,/g, '')) || 0;
-          console.log(debit);
           const credit =
             parseFloat(transaction['Credit']?.replace(/,/g, '')) || 0;
           currentBalance = currentBalance + credit - debit;
