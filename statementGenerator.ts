@@ -43,19 +43,6 @@ class StatementGenerator {
   private async generatePdf(): Promise<void> {
     const doc = new jsPDF();
 
-    // Add account information
-    doc.setFontSize(16);
-    doc.text('Account Statement', 10, 10);
-
-    doc.setFontSize(12);
-    doc.text(`Account Number: ${accountData.accountNumber}`, 10, 20);
-    doc.text(`Account Name: ${accountData.accountName}`, 10, 30);
-    doc.text(
-      `Opening Balance: ${accountData.openingBalance.toFixed(2)}`,
-      10,
-      40
-    );
-
     const tableData = this.jsonData.map((transaction) => {
       // Reformatting transaction data for the table
       return [
