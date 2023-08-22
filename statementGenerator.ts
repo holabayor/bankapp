@@ -1,23 +1,36 @@
 import fs from 'fs';
 import csv from 'csv-parser';
 import jsPDF from 'jspdf';
-import 'jspdf-autotable';
+import autoTable from 'jspdf-autotable';
 
 class StatementGenerator {
   private accountName: string;
-  private jsonData: any[];
+  private jsonData: Record<string, string>[];
+  private openingBalance: Number;
+  private accountType: string;
+  private customerNumber: string;
+  private accountNumber: string;
+  private currency: string;
 
-  constructor(accountName: string) {
-    this.accountName = accountName;
+  constructor() {
+    this.accountName = '';
+    this.accountType = '';
+    this.customerNumber = '';
+    this.accountNumber = '';
     this.jsonData = [];
+    this.openingBalance = 0;
+    this.currency = 'NGN';
   }
 
-  private async convertCsvToJson(inputFile: string): Promise<void> {
+  private async convertCsvToJson(
+    inputFile: string,
+    skipLines = 4
+  ): Promise<void> {
     return new Promise((resolve, reject) => {
       fs.createReadStream(inputFile)
-        .pipe(csv({ skipLines: 4 }))
+        .pipe(csv({ skipLines: skipLines }))
         .on('data', (row) => {
-          const filteredRow = {};
+          const filteredRow: { [key: string]: string } = {};
           Object.keys(row).forEach((key) => {
             if (
               row[key] !== null &&
@@ -43,9 +56,21 @@ class StatementGenerator {
   }
 
   private async cleanHeader(inputFile: string): Promise<void> {
-    return new Promise((resolve, reject) => {
-      fs.readFileSync(inputFile, 'utf-8').split('\n');
-    });
+    try {
+      const inputLines = fs.readFileSync(inputFile, 'utf-8').split('\n');
+
+      this.accountName = this.extractValue(inputFile[0], 2);
+      this.accountNumber = this.extractValue(inputLines[0], 2); // Remove double quotes and \r from account number
+      this.accountType = this.extractValue(inputLines[0], 4); // Remove double quotes and \r from account type
+      this.customerNumber = this.extractValue(inputLines[1], 1); // Remove double quotes from customer number
+      this.currency = this.extractValue(inputLines[1], 4); // Remove double quotes and \r from currency
+      let openingBalance = inputLines[3].replace(/[^0-9.-]/g, ''); // Extract value after comma and remove unwanted characters
+      this.openingBalance = openingBalance.endsWith('-')
+        ? parseFloat(openingBalance) * -1
+        : parseFloat(openingBalance);
+    } catch (error: any) {
+      console.error(`Error reading file: ${error.message}`);
+    }
   }
 
   private async generatePdf(): Promise<void> {
@@ -58,14 +83,14 @@ class StatementGenerator {
         transaction['Booking Date'],
         transaction['Description'],
         transaction['Narration'],
-        transaction['Debit'],
-        transaction['Credit'],
-        transaction['Closing Balance'],
+        parseFloat(transaction['Debit'].replace(',', '')) || '',
+        parseFloat(transaction['Credit'].replace(',', '')) || '',
+        parseFloat(transaction['Closing Balance'].replace(',', '')) || '',
       ];
     });
 
     doc.text(`Account Statement for ${this.accountName}`, 10, 10);
-    doc.autoTable({
+    autoTable(doc, {
       head: [
         [
           'Value Date',
@@ -87,6 +112,7 @@ class StatementGenerator {
   public async run(inputFile: string): Promise<void> {
     try {
       await this.convertCsvToJson(inputFile);
+      await this.cleanHeader(inputFile);
       await this.generatePdf();
       console.log('PDF statement generated successfully.');
     } catch (error) {
@@ -96,8 +122,7 @@ class StatementGenerator {
 }
 
 // Example usage
-const accountName = 'DAILY_SAVINGS_SCHEME_4';
 const inputFile = './input.csv';
 
-const statementGenerator = new StatementGenerator(accountName);
+const statementGenerator = new StatementGenerator();
 statementGenerator.run(inputFile);

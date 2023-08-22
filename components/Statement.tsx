@@ -37,7 +37,7 @@ export default function BankStatementTable({ accountData }: Props) {
   const doc = new jsPDF();
 
   autoTable(doc, {
-    columns: [
+    head: [
       [
         'Value Date',
         'Description',
