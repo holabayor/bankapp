@@ -6,12 +6,10 @@ import 'jspdf-autotable';
 class StatementGenerator {
   private accountName: string;
   private jsonData: any[];
-  private skippedLines: string[];
 
   constructor(accountName: string) {
     this.accountName = accountName;
     this.jsonData = [];
-    this.skippedLines = [];
   }
 
   private async convertCsvToJson(inputFile: string): Promise<void> {
@@ -37,6 +35,16 @@ class StatementGenerator {
         .on('error', (error) => {
           reject(error);
         });
+    });
+  }
+
+  private extractValue(line: string, index: number) {
+    return line.split(',')[index].replace(/"/g, '').replace(/\r/g, '');
+  }
+
+  private async cleanHeader(inputFile: string): Promise<void> {
+    return new Promise((resolve, reject) => {
+      fs.readFileSync(inputFile, 'utf-8').split('\n');
     });
   }
 
