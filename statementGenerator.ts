@@ -3,7 +3,7 @@ import csv from 'csv-parser';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 
-class StatementGenerator {
+export class StatementGenerator {
   private accountName: string;
   private jsonData: Record<string, string>[];
   private openingBalance: Number;
@@ -120,9 +120,3 @@ class StatementGenerator {
     }
   }
 }
-
-// Example usage
-const inputFile = './input.csv';
-
-const statementGenerator = new StatementGenerator();
-statementGenerator.run(inputFile);

@@ -4,9 +4,22 @@ import React from 'react';
 import { Input } from './ui/input';
 import { DatePicker } from './DatePicker';
 import { Button } from './ui/button';
+import { StatementGenerator } from '@/statementGenerator';
+
+const inputFile = './test_input.csv';
+const statementGenerator = new StatementGenerator();
 
 export default function Dashboard() {
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
+  // const [date, setDate] = React.useState<Date | undefined>(new Date());
+  const handleGeneratePDF = async () => {
+    try {
+      await statementGenerator.run(inputFile);
+      console.log('PDF statement generated successfully.');
+    } catch (error) {
+      console.error('Error generating PDF statement:', error);
+    }
+  };
+
   return (
     <main>
       <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-center">
@@ -28,9 +41,7 @@ export default function Dashboard() {
         </Button>
         <Button
           size={'lg'}
-          onClick={() => {
-            console.log('download');
-          }}
+          onClick={handleGeneratePDF}
           className="w-1/4 font-semibold"
         >
           Download
