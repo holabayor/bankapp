@@ -1,20 +1,23 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Input } from './ui/input';
 import { DatePicker } from './DatePicker';
 import { Button } from './ui/button';
-import { StatementGenerator } from '@/statementGenerator';
-
-const inputFile = './test_input.csv';
-const statementGenerator = new StatementGenerator();
 
 export default function Dashboard() {
+  const [accountNumber, setAccountNumber] = useState('');
   // const [date, setDate] = React.useState<Date | undefined>(new Date());
   const handleGeneratePDF = async () => {
     try {
-      await statementGenerator.run(inputFile);
-      console.log('PDF statement generated successfully.');
+      const response = await fetch('/api/generate-statement', {
+        method: 'POST',
+      });
+      if (response.ok) {
+        console.log('Statement generation started.');
+      } else {
+        console.error('Error starting statement generation.');
+      }
     } catch (error) {
       console.error('Error generating PDF statement:', error);
     }
@@ -31,6 +34,10 @@ export default function Dashboard() {
           id="account"
           autoCapitalize="on"
           maxLength={11}
+          value={accountNumber}
+          onChange={(e) => {
+            setAccountNumber(e.target.value);
+          }}
           placeholder="Account Number"
           className="w-full md:w-1/2"
         />
@@ -39,11 +46,7 @@ export default function Dashboard() {
         <Button size={'lg'} className="w-1/4 font-semibold">
           Search
         </Button>
-        <Button
-          size={'lg'}
-          onClick={handleGeneratePDF}
-          className="w-1/4 font-semibold"
-        >
+        <Button size={'lg'} onClick={() => {}} className="w-1/4 font-semibold">
           Download
         </Button>
       </div>
